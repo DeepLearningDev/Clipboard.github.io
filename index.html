@@ -7,6 +7,7 @@
         <meta name="description" content="">
         <title>DL Dev | Clipboard App</title>
         <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body>
         <div class="container">
@@ -21,7 +22,10 @@
                 <button class="paste"><img src="assets/paste-96px.png">Paste</button>
                 <button class="save"><img src="assets/paste-96px.png">Save</button>
             </div>
+            <button class="uploadButton" onclick="openPicker()">Upload File</button>
         </div>
         <script src="code/front-end/main.js" async defer></script>
+        <script src="https://static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+        <script src="code/front-end/file-picker.js"></script>
     </body>
 </html>

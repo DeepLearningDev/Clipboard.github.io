@@ -9,15 +9,17 @@ body {
     justify-content: center;
     height: 100vh;
     background: linear-gradient(160deg, #81d8e7, #e4a3d6);
-    padding-top: 4%;
+    padding-top: 5%;
 }
+
+
 
 .container {
     display: block;
     align-content: center;
     color: #fff;
     width: 540px;
-    height: 420px;
+    height: 470px;
     margin: 0 auto;
     padding: 20px; 
     background-color: rgba(255, 255, 255, 0.2);
@@ -41,6 +43,8 @@ body {
     margin-right: 10px;
 }
 
+
+
 .button-container{
     display: flex;
     width: 100%;
@@ -52,22 +56,39 @@ body {
 .container button{
     display: flex;
     align-items: center;
-    background: linear-gradient(#9dffa5, #018d5e);
     color: #fff;
     font-size: 16px;
     outline: 0;
     border: 0;
     border-radius: 40px;
-    padding: 10px 25px;
-    margin: 10px 25px;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); 
+}
+
+.copy{
+    background: linear-gradient(#9dffa5, #018d5e);
+    margin: 10px 25px;
+    padding: 10px 25px;
+}
+
+.paste{
+    background: linear-gradient(#bd88fa, #8a53c9);
+    margin: 10px 25px;
+    padding: 10px 25px;
+}
+
+.save {
+    background: linear-gradient(#00c3ff, #006ead);
+    margin: 10px 25px;
+    padding: 10px 25px;
 }
 
 .container button img{
     width: 25px;
     margin-right: 8px;
 }
+
+
 
 .input-box{
     position: flex;
@@ -91,3 +112,32 @@ body {
     left: 460px;
     bottom: 40px
 }
+
+
+.drop-area {
+    color: #333;
+    border: 2px dashed #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #d8d8d8c7;
+}
+
+#fileElem{
+    color: #333;
+    display: flex;
+    margin-left: 33%;
+}
+  
+.drop-area.highlight {
+    border-color: #007bff;
+}
+
+.uploadButton{
+    background: linear-gradient(#f1d178, #bd9101);
+    margin-left: 28%;
+    margin-top: 25px;
+    padding: 12px 75px;
+}
+  
