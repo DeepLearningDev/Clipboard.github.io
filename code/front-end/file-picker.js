@@ -28,6 +28,7 @@ const options = {
         // Creating link element and add to clipboard
         const linkElement = document.createElement("a");
         linkElement.href = downloadLink;
+        linkElement.innerHTML = "https://cdn.filestackcontent.com/" + handle
         clipboard.innerHTML = ""; // Clear previous content
         clipboard.appendChild(linkElement);
     }
