@@ -14,8 +14,18 @@ body {
 
 .container {
     display: block;
+    align-content: center;
     color: #fff;
+    width: 540px;
+    height: 420px;
+    margin: 0 auto;
+    padding: 20px; 
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); 
 }
+
 
 .container h1{
     display: flex;
@@ -51,6 +61,7 @@ body {
     padding: 10px 25px;
     margin: 10px 25px;
     cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); 
 }
 
 .container button img{
