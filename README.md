@@ -19,4 +19,4 @@ This is a simple web application that allows users to copy text to the clipboard
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/clipboard-web-app.git
+   git clone https://github.com/DeepLearningDev/Clipboard.github.io.git
