@@ -28,7 +28,6 @@ const options = {
         // Creating link element and add to clipboard
         const linkElement = document.createElement("a");
         linkElement.href = downloadLink;
-        linkElement.innerText = "Download File";
         clipboard.innerHTML = ""; // Clear previous content
         clipboard.appendChild(linkElement);
     }
