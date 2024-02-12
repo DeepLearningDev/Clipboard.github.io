@@ -1,0 +1,82 @@
+*{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(160deg, #81d8e7, #e4a3d6);
+    padding-top: 4%;
+}
+
+.container {
+    display: block;
+    color: #fff;
+}
+
+.container h1{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 600;
+;
+}
+
+.container h1 img{
+    width: 60px;
+    margin-right: 10px;
+}
+
+.button-container{
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    min-width: 150px;
+    margin-left: 0;
+}
+
+.container button{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#9dffa5, #018d5e);
+    color: #fff;
+    font-size: 16px;
+    outline: 0;
+    border: 0;
+    border-radius: 40px;
+    padding: 10px 25px;
+    margin: 10px 25px;
+    cursor: pointer;
+}
+
+.container button img{
+    width: 25px;
+    margin-right: 8px;
+}
+
+.input-box{
+    position: flex;
+    width: 500px;
+    max-width: 500px;
+    min-height: 150px;
+    overflow-y: auto;
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    margin: 25px 0;
+    margin-bottom: 0;
+    outline: none;
+    border-radius: 10px;
+}
+
+.clipboard-container img{
+    width: 25px;
+    position: relative;
+    cursor: pointer;
+    left: 460px;
+    bottom: 40px
+}

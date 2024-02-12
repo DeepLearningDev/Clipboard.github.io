@@ -1,0 +1,9 @@
+{
+    "workbench.iconTheme": "vs-seti",
+    "liveServer.settings.https": {
+    "enable": true, //set it true to enable the feature.
+    "cert": "C:\\Users\\Kaleb\\VSCode Projects\\Web Apps\\Clipboard-App\\certs\\cert.crt", //full path of the certificate
+    "key": "C:\\Users\\Kaleb\\VSCode Projects\\Web Apps\\Clipboard-App\\certs\\cert.key", //full path of the private key
+    "passphrase": ""
+    }
+}
