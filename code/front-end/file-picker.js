@@ -1,8 +1,6 @@
 // JavaScript code for Filestack uploading file and link generation
 
-const clipboard = document.querySelector(".input-box");
-
-// Initialize Filestack client with your API key
+// Initializing Filestack client with API key
 const apikey = 'AgdxU3Dh0QrWjSGbB3hwzz';
 const client = filestack.init(apikey); 
 
