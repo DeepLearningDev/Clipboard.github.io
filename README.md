@@ -8,6 +8,8 @@ This is a simple web application that allows users to copy text to the clipboard
 - Paste text from the clipboard into the application.
 - Clear the clipboard to remove any stored content.
 - Automatic data storage in the browser's local storage for persistent usage.
+- Upload files to a small storage through Filestack API
+- Link generated to download uploaded files
 
 ## Compatibility
 
