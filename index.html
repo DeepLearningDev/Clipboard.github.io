@@ -21,20 +21,11 @@
                 <button class="paste"><img src="assets/paste-96px.png">Paste</button>
                 <button class="save"><img src="assets/paste-96px.png">Save</button>
             </div>
-            <div class="drop-area">
-                <label for="fileElem">Drag &amp; drop files here or click to select files</label>
-            </div>
-            <input type="file" id="fileElem" onchange="handleFiles(this.files)">
-            <button class="uploadButton">Upload</button>
+            <button class="uploadButton" onclick="openPicker()">Upload File</button>
         </div>
-        <script src="//static.filestackapi.com/filestack-drag-and-drop-js/{MAJOR_VERSION}.x.x/filestack-drag-and-drop.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+        <script src="code/front-end/file-picker.js"></script>
         <script src="code/front-end/main.js" async defer></script>
-        <script src="code/file-loading.js" async defer></script>
-        <script>
-            // Event listener for upload button
-            document.getElementsByClassName('uploadButton').addEventListener('click', function() {
-                document.getElementById('fileElem').click(); // Trigger file input click event
-            });
-        </script>
     </body>
 </html>

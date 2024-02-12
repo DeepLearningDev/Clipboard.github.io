@@ -19,7 +19,7 @@ body {
     align-content: center;
     color: #fff;
     width: 540px;
-    height: 580px;
+    height: 470px;
     margin: 0 auto;
     padding: 20px; 
     background-color: rgba(255, 255, 255, 0.2);
@@ -136,8 +136,8 @@ body {
 
 .uploadButton{
     background: linear-gradient(#f1d178, #bd9101);
-    margin-left: 80%;
-    margin-top: 20px;
-    padding: 10px 20px;
+    margin-left: 28%;
+    margin-top: 25px;
+    padding: 12px 75px;
 }
   
