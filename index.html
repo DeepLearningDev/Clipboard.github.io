@@ -23,11 +23,18 @@
             </div>
             <div class="drop-area">
                 <label for="fileElem">Drag &amp; drop files here or click to select files</label>
-              </div>
-              <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+            </div>
+            <input type="file" id="fileElem" onchange="handleFiles(this.files)">
+            <button class="uploadButton">Upload</button>
         </div>
         <script src="//static.filestackapi.com/filestack-drag-and-drop-js/{MAJOR_VERSION}.x.x/filestack-drag-and-drop.min.js"></script>
         <script src="code/front-end/main.js" async defer></script>
         <script src="code/file-loading.js" async defer></script>
+        <script>
+            // Event listener for upload button
+            document.getElementsByClassName('uploadButton').addEventListener('click', function() {
+                document.getElementById('fileElem').click(); // Trigger file input click event
+            });
+        </script>
     </body>
 </html>
