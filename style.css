@@ -12,12 +12,14 @@ body {
     padding-top: 4%;
 }
 
+
+
 .container {
     display: block;
     align-content: center;
     color: #fff;
     width: 540px;
-    height: 420px;
+    height: 520px;
     margin: 0 auto;
     padding: 20px; 
     background-color: rgba(255, 255, 255, 0.2);
@@ -40,6 +42,8 @@ body {
     width: 60px;
     margin-right: 10px;
 }
+
+
 
 .button-container{
     display: flex;
@@ -69,6 +73,8 @@ body {
     margin-right: 8px;
 }
 
+
+
 .input-box{
     position: flex;
     width: 500px;
@@ -91,3 +97,25 @@ body {
     left: 460px;
     bottom: 40px
 }
+
+
+.drop-area {
+    color: #333;
+    border: 2px dashed #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #d8d8d8c7;
+}
+
+#fileElem{
+    color: #333;
+    display: flex;
+    margin-left: 33%;
+}
+  
+.drop-area.highlight {
+    border-color: #007bff;
+}
+  

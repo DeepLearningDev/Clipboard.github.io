@@ -21,6 +21,10 @@
                 <button class="paste"><img src="assets/paste-96px.png">Paste</button>
                 <button class="save"><img src="assets/paste-96px.png">Save</button>
             </div>
+            <div class="drop-area">
+                <label for="fileElem">Drag &amp; drop files here or click to select files</label>
+              </div>
+              <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
         </div>
         <script src="code/front-end/main.js" async defer></script>
     </body>
