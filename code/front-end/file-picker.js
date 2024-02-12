@@ -1,4 +1,5 @@
-// file-loading.js
+// JavaScript code for Filestack uploading file and link generation
+
 const clipboard = document.querySelector(".input-box");
 
 // Initialize Filestack client with your API key
