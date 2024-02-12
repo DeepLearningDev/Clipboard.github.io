@@ -1,3 +1,5 @@
+// JavaScript code for copy, paste, and save buttons
+
 const clipContainer = document.querySelector(".clipboard-container");
 const copyBtn = document.querySelector(".copy");
 const pasteBtn = document.querySelector(".paste");

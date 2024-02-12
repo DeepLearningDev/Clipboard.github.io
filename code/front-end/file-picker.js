@@ -10,7 +10,8 @@ const options = {
     "accept": [
         ".pdf",
         "image/*",
-        "audio/*"
+        "audio/*",
+        ".zip"
     ],
     "fromSources": [
         "local_file_system",
@@ -19,33 +20,23 @@ const options = {
     ],
     "maxFiles": 1,
     "minFiles": 1,
-    "maxSize": 10000000
+    "maxSize": 10000000,
+    // Add callback to handle file upload finished event
+    onFileUploadFinished: function(fileData) {
+        const handle = fileData.handle;
+        // Generating download link using the handle
+        const downloadLink = `https://cdn.filestackcontent.com/${handle}`;
+        // Creating link element and add to clipboard
+        const linkElement = document.createElement("a");
+        linkElement.href = downloadLink;
+        linkElement.innerText = "Download File";
+        clipboard.innerHTML = ""; // Clear previous content
+        clipboard.appendChild(linkElement);
+    }
 };
 
 // Creating a picker instance
 const picker = client.picker(options);
-
-// Function to handle files selected/uploaded by the user
-function handleFiles(files) {
-    console.log("Files selected/uploaded:", files);
-    function handleFiles(files) {
-        clipboard.innerHTML = "";
-    
-        for (let i = 0; i < files.length; i++) {
-            let file = files[i];
-            let downloadLink = document.createElement("a");
-            downloadLink.href = file.url; // Assuming Filestack provides the download URL directly
-            downloadLink.download = file.name;
-            downloadLink.innerText = "Download: " + file.name;
-            clipboard.appendChild(downloadLink);
-        }
-    }
-}
-
-// Event listener for when files are selected/uploaded
-picker.on('fileSelected', function(response) {
-    handleFiles(response.filesUploaded);
-});
 
 // Function to open the picker
 function openPicker() {
