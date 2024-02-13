@@ -28,9 +28,11 @@ const options = {
         // Creating link element and add to clipboard
         const linkElement = document.createElement("a");
         linkElement.href = downloadLink;
-        linkElement.innerHTML = "https://cdn.filestackcontent.com/" + handle
+        linkElement.innerHTML = "Download File";
+        linkElement.setAttribute("target", "_blank"); // To open link in a new tab
         clipboard.innerHTML = ""; // Clear previous content
         clipboard.appendChild(linkElement);
+        clipboard.setAttribute("contenteditable", false);
     }
 };
 
