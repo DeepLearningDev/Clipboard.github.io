@@ -22,15 +22,15 @@ function loadData() {
 copyBtn.addEventListener("click", async () => {
     try {
         let copiedText = clipboard.innerHTML;
-        const anchorTagRegex = /<a\s+(?:[^>]*?\s+)?href=(["'])(.*?)\1[^>]*?>(.*?)<\/a>/gi;
-        const anchorMatch = copiedText.match(anchorTagRegex);
-        if (anchorMatch) {
-            // If clipboard content contains an anchor tag, extract the text from inside the tag
-            const anchorContent = anchorMatch.map(tag => {
-                const textRegex = /<a[^>]*>(.*?)<\/a>/i;
-                return tag.match(textRegex)[1];
+        const anchorTagRegex = /<a\s+(?:[^>]*?\s+)?href=(["'])(.*?)\1[^>]*?>/gi;
+        const hrefMatches = copiedText.match(anchorTagRegex);
+        if (hrefMatches) {
+            // If clipboard content contains anchor tags, extract the href attributes
+            const hrefValues = hrefMatches.map(href => {
+                const hrefRegex = /href=(['"])(.*?)\1/i;
+                return href.match(hrefRegex)[2];
             });
-            copiedText = anchorContent.join(' ');
+            copiedText = hrefValues.join('\n'); // You can join the href values with new lines if needed
         }
         await navigator.clipboard.writeText(copiedText);
         console.log("Text copied");
@@ -40,6 +40,7 @@ copyBtn.addEventListener("click", async () => {
         console.error("Error copying text", err);
     }
 });
+
 
 
 saveBtn.addEventListener("click", async () => {
