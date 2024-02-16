@@ -28,14 +28,13 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); 
 }
 
-
 .container h1{
     display: flex;
     width: 100%;
     align-items: center;
+    justify-content: space;
     font-size: 35px;
     font-weight: 600;
-;
 }
 
 .container h1 img{
@@ -43,6 +42,49 @@ body {
     margin-right: 10px;
 }
 
+.signin-buttons {
+    display: flex;
+    margin-left: 30%;
+}
+
+.signin-buttons button {
+    margin-left: 10px;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-size: cover;
+}
+
+.signin-buttons button.google-signin {
+    background-image: url('assets/google-icon.png');
+}
+
+.signin-buttons button.guest-signin {
+    background-color: #818181;
+    background-image: url('assets/guest-icon.png');
+}
+
+.signin-buttons button::before {
+    content: attr(data-tooltip); /* Use the data-tooltip attribute as content */
+    position: absolute;
+    top: -45px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 14px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+}
+
+.signin-buttons button:hover::before {
+    opacity: 1; /* Show on hover */
+}
 
 
 .button-container{
@@ -50,7 +92,6 @@ body {
     width: 100%;
     max-width: 500px;
     min-width: 150px;
-    margin-left: 0;
 }
 
 .container button{
